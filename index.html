@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head >
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title >Генератор теней для символов HTML</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="http://atmpl.ru/assets/css/bootstrap.min.css" rel="stylesheet" />
+<link href="http://atmpl.ru/test/text-shadow/jquery-ui-git.css" rel="stylesheet" />
+<link href="http://atmpl.ru/test/text-shadow/jquery.colorpicker.css" rel="stylesheet" />
+<link href="http://atmpl.ru/design/modal-window/2015/colorbox-5/colorbox.css" rel="stylesheet" />
+<style>
+#symbol {font-size:44px;padding:10px}
+.symbol--block {max-width:520px;min-height:320px;overflow:hidden}
+#code--clear {border-color:#ddd}
+</style>
+<script src="http://atmpl.ru/assets/js/jquery-1.10.2.js"></script>
+</head> 
+<body>
+<div class="container"><div class="row"><div class="col-md-12">
+<h1 class="text-center">Генератор теней для символов HTML</h1>
+<fieldset>
+<div class="clearfix"></div>
+<div class="col-md-6 symbol--block"><i id="symbol"></i><div class="clearfix"></div></div>
+
+<div class="col-md-6 option-text-shadow">
+<h3 class="text-left">Настройка теней для символов</h3>
+<div class="form-group">
+<div class="input-group input-group-lg col-sm-12"">
+<span class="input-group-addon"><a href="http://atmpl.ru/index/all_html_and_css_symbols/0-11" class="iframe">Символы</a></span>
+<input id="code--symbol" type="text" class="form-control form-group-lg" name="code" value="&amp;#9773" placeholder="HTML код" />
+<span class="input-group-addon"><input type="button" name="code" id="code--clear" value="Очистить" /></span>
+</div>
+</div>
+
+<div class="form-group">
+<div class="input-group input-group-sm col-sm-12"">
+<span class="input-group-addon"><input type="radio" name="mode" value="1"></span>
+<input class="form-control" type="text" value="Тип тени Радуга" placeholder="Тип тени Радуга" disabled/>
+</div>
+</div>
+
+<div class="form-group">
+<div class="input-group input-group-sm col-sm-12"">
+<span class="input-group-addon"><input type="radio" name="mode" value="2"></span>
+<input class="form-control" type="text" value="Тип тени Слой" placeholder="Тип тени Слой" disabled/>
+</div>
+</div>
+
+<div class="form-group">
+<div class="input-group input-group-sm col-sm-12"">
+<span class="input-group-addon"><input type="radio" name="mode" value="3"></span>
+<input class="form-control" type="text" value="Сброс всех теней" placeholder="Сброс всех теней" disabled/>
+</div>
+</div>
+
+<div class="form-group">
+<div class="input-group input-group-sm col-sm-12">
+<span class="input-group-addon">font-size:<span id="num--size">44</span>px;</span>
+<div id="size" class="form-control"></div>
+</div>
+</div>
+
+<div class="form-group">
+<div class="input-group input-group-sm col-sm-12">
+<span class="input-group-addon">Начальный цвет тени</span>
+<input type="text" class="form-control shadow-end-color cp-basic" value="3569ba" placeholder="3569ba">
+<div class="swatch shadow-start-color-swatch"></div>
+</div>
+</div>
+
+<div class="form-group">
+<div class="input-group input-group-sm col-sm-12">
+<span class="input-group-addon"> Конечный цвет тени</span>
+<input type="text" class="form-control shadow-end-color cp-basic" value="134888" placeholder="134888">
+<div class="swatch shadow-end-color-swatch"></div>
+</div>
+</div>
+
+<div class="form-group">
+<div class="input-group input-group-sm col-sm-12">
+<span class="input-group-addon">Цвет текста</span>
+<input type="text" class="form-control text-color cp-basic" value="c4cad4" placeholder="c4cad4">
+<div class="swatch text-color-swatch"></div>
+</div>
+</div>
+
+<div class="form-group">
+<div class="input-group input-group-sm col-sm-12">
+<span class="input-group-addon">Цвет фона</span>
+<input type="text" class="form-control background-color cp-basic" value="ffffff" placeholder="ffffff">
+<div class="swatch background-color-swatch"></div>
+</div>
+</div>
+
+<div class="form-group">
+<div class="input-group input-group-sm col-sm-12">
+<label class="input-group-addon">Глубина тени</label>
+<div id="depth" class="form-control"></div>
+</div>
+</div>
+
+<div class="form-group">
+<div class="input-group input-group-sm col-sm-12">
+<label class="input-group-addon">Смещение X</label>
+<div id="xDirection" class="form-control"></div>
+</div>
+</div>
+
+<div class="form-group">
+<div class="input-group input-group-sm col-sm-12">
+<label class="input-group-addon">Смещение Y</label>
+<div id="yDirection" class="form-control"></div>
+</div>
+</div>
+
+<div class="form-group">
+<div class="input-group input-group-sm col-sm-12">
+<label class="input-group-addon">Размытость</label>
+<div id="blur" class="form-control"></div>
+</div>
+</div>
+<div class="clearfix"></div> 
+</div>
+ 
+<div class="col-md-12 text-shadow-code">
+<div class="clearfix"></div> 
+<pre>
+<code class="shadow-css language-css">
+</code>
+</pre>
+</div>
+<script src="http://atmpl.ru/test/text-shadow/jquery-ui.min.js"></script>
+<script src="http://atmpl.ru/test/text-shadow/jquery.colorpicker.js"></script>
+<script src="http://atmpl.ru/test/text-shadow/jquery.xcolor.min.js"></script>
+<script src="http://atmpl.ru/test/text-shadow/prism.js"></script>
+<script src="http://atmpl.ru/design/web-tools/2015/shadow-symbols/generator-shadow-symbols.js"></script>
+<script src="http://atmpl.ru/design/modal-window/2015/jquery.colorbox-min.js"></script>
+</fieldset>
+<script>
+$(document).ready(function() {
+$(".iframe").colorbox({iframe:true, width:"90%", height:"90%", speed:500, transition:"fade", fadeOut:700});
+});
+</script>
+</div></div></div>
+</body>
+</html>
